@@ -1,5 +1,5 @@
 {
-  "name": "the-boring-method-v3",
+  "name": "the-boring-method-v4",
   "private": true,
   "scripts": {
     "dev": "next dev",

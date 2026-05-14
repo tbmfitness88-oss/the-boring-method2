@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'The Boring Method',
-  description: 'Hybrid Performance Coaching by Coach Chan',
+  description: 'Private Performance Coaching by Coach Chan',
 }
 
 export default function RootLayout({ children }) {

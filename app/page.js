@@ -6,7 +6,7 @@ export default function HomePage() {
       <section className="flex min-h-screen flex-col items-center justify-center px-8 text-center">
         <div className="max-w-5xl space-y-8">
           <p className="text-sm uppercase tracking-[0.4em] text-neutral-400">
-            Hybrid Performance Coaching
+            Private Performance Coaching
           </p>
 
           <div>
@@ -19,8 +19,8 @@ export default function HomePage() {
           </div>
 
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-300 md:text-xl">
-            Evidence-based hybrid performance coaching built through consistency,
-            discipline, and intelligent training.
+            Structured coaching for busy professionals focused on fat loss,
+            body recomposition, strength, endurance, and sustainable fitness.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -29,14 +29,14 @@ export default function HomePage() {
               target="_blank"
               className="rounded-2xl bg-white px-6 py-3 font-semibold text-black"
             >
-              Contact via Viber
+              Apply for Coaching
             </a>
 
             <a
               href="mailto:tbmfitness88@gmail.com"
               className="rounded-2xl border border-neutral-700 px-6 py-3"
             >
-              Email TBM
+              Contact TBM
             </a>
           </div>
         </div>
@@ -50,88 +50,118 @@ export default function HomePage() {
           </p>
 
           <h2 className="text-4xl font-bold md:text-5xl">
-            Performance Coaching
+            Private Coaching Services
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           {[
-            '1-on-1 Coaching',
-            'HYROX Prep',
-            'Running Programs',
-            'S&C Programming',
-            'Group Training',
-            'Run Club / Run Class',
+            {
+              title: 'Private Coaching',
+              desc: 'Structured one-on-one coaching for busy professionals focused on fat loss, body recomposition, strength, energy, and sustainable long-term fitness.',
+              inclusions: [
+                'Personalized coaching',
+                'Fat loss & body recomposition',
+                'Strength & conditioning',
+                'Performance tracking',
+                'Accountability support',
+              ],
+              pricing: [
+                '10 Sessions — ₱10,000',
+                '15 Sessions — ₱14,000',
+                '20 Sessions — ₱18,000',
+              ],
+            },
+            {
+              title: 'Running Programs',
+              desc: 'Endurance-focused training built around sustainable progress.',
+              inclusions: [
+                'Structured run programming',
+                'Aerobic development',
+                'Pacing strategy',
+                'Recovery guidance',
+              ],
+              pricing: ['Custom coaching plans available'],
+            },
+            {
+              title: 'Hybrid Performance',
+              desc: 'Strength and conditioning for long-term athletic development.',
+              inclusions: [
+                'Strength development',
+                'Conditioning systems',
+                'Mobility integration',
+                'Athlete-focused progression',
+              ],
+              pricing: ['Custom pricing available'],
+            },
+            {
+              title: 'Group Training',
+              desc: 'Small-group coaching for accountability and structured progression.',
+              inclusions: [
+                'Small-group coaching',
+                'Team conditioning',
+                'Structured progression',
+                'Performance-focused sessions',
+              ],
+              pricing: [
+                '3–5 People — ₱2,500/session',
+                '6–8 People — ₱3,500/session',
+              ],
+            },
           ].map((service) => (
-            <div
-              key={service}
-              className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8"
+            <details
+              key={service.title}
+              className="group rounded-3xl border border-neutral-900 bg-neutral-950 p-8 transition duration-300 hover:border-neutral-700"
             >
-              <h3 className="text-2xl font-semibold">{service}</h3>
-            </div>
+              <summary className="cursor-pointer list-none">
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-bold">{service.title}</h3>
+
+                  <p className="leading-relaxed text-neutral-400">
+                    {service.desc}
+                  </p>
+
+                  <button className="rounded-2xl border border-neutral-700 px-5 py-3 text-sm font-semibold transition hover:border-white">
+                    Learn More
+                  </button>
+                </div>
+              </summary>
+
+              <div className="mt-8 space-y-8 border-t border-neutral-800 pt-8">
+                <div>
+                  <h4 className="mb-3 text-sm uppercase tracking-[0.3em] text-neutral-500">
+                    Inclusions
+                  </h4>
+
+                  <div className="space-y-2 text-neutral-300">
+                    {service.inclusions.map((item) => (
+                      <p key={item}>• {item}</p>
+                    ))}
+                  </div>
+                </div>
+
+                <details className="rounded-2xl border border-neutral-800 p-5">
+                  <summary className="cursor-pointer text-sm uppercase tracking-[0.2em] text-neutral-400">
+                    Coaching Pricing
+                  </summary>
+
+                  <div className="mt-4 space-y-2 text-neutral-300">
+                    {service.pricing.map((item) => (
+                      <p key={item}>{item}</p>
+                    ))}
+                  </div>
+                </details>
+
+                <a
+                  href="https://wa.me/639614416755"
+                  target="_blank"
+                  className="inline-block rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black"
+                >
+                  Apply for Coaching
+                </a>
+              </div>
+            </details>
           ))}
-        </div>
-      </section>
-
-      {/* PRICING */}
-      <section className="border-t border-neutral-900 px-8 py-24 md:px-20">
-        <div className="mb-14">
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-neutral-500">
-            Pricing
-          </p>
-
-          <h2 className="text-4xl font-bold md:text-5xl">
-            Coaching Packages
-          </h2>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            {
-              title: '10 Sessions',
-              price: '₱10,000',
-              desc: '1-on-1 face-to-face coaching.',
-            },
-            {
-              title: '15 Sessions',
-              price: '₱14,000',
-              desc: 'Structured hybrid performance coaching.',
-            },
-            {
-              title: '20 Sessions',
-              price: '₱18,000',
-              desc: 'Long-term coaching for serious progress.',
-            },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8"
-            >
-              <h3 className="text-2xl font-semibold">{item.title}</h3>
-              <p className="mt-4 text-4xl font-black">{item.price}</p>
-              <p className="mt-4 text-neutral-400">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8">
-            <h3 className="text-2xl font-semibold">Group Training</h3>
-
-            <div className="mt-6 space-y-3 text-neutral-300">
-              <p>3–5 People — ₱2,500/session</p>
-              <p>6–8 People — ₱3,500/session</p>
-            </div>
-          </div>
-
-          <div className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8">
-            <h3 className="text-2xl font-semibold">Run Club / Run Class</h3>
-
-            <div className="mt-6 space-y-3 text-neutral-300">
-              <p>Minimum of 10 participants</p>
-              <p>₱4,000 per session</p>
-            </div>
-          </div>
         </div>
       </section>
     </div>
