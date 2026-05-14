@@ -1,5 +1,5 @@
 {
-  "name": "the-boring-method-v4",
+  "name": "tbm-expandable",
   "private": true,
   "scripts": {
     "dev": "next dev",
