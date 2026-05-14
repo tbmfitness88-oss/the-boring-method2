@@ -1,9 +1,11 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
+      
+      {/* HERO */}
       <section className="border-b border-neutral-900">
-        <div className="grid min-h-screen items-center gap-10 px-8 py-20 lg:grid-cols-[60%_40%] lg:px-20">
-          
+        <div className="grid min-h-screen items-center gap-12 px-8 py-20 lg:grid-cols-[60%_40%] lg:px-20">
+
           <div className="max-w-3xl">
             <p className="mb-4 text-xs uppercase tracking-[0.4em] text-neutral-500">
               The Boring Method
@@ -48,13 +50,17 @@ export default function Home() {
                 className="h-[520px] w-full object-cover"
               />
 
-              <div className="absolute inset-0 bg-black/25" />
+              <div className="absolute inset-0 bg-black/20" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-neutral-900 px-8 py-24 lg:px-20">
+      {/* SERVICES */}
+      <section
+        id="services"
+        className="border-b border-neutral-900 px-8 py-24 lg:px-20"
+      >
         <div className="mb-16 text-center">
           <p className="mb-4 text-sm uppercase tracking-[0.4em] text-neutral-500">
             Services
@@ -66,24 +72,64 @@ export default function Home() {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-2">
-          {['Private Coaching','Running Performance','Hybrid Performance','Group Training'].map((service)=>(
-            <div key={service} className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8">
-              <h3 className="mb-4 text-3xl font-bold">{service}</h3>
-              <p className="leading-relaxed text-neutral-400">
-                Structured coaching designed for sustainable performance and long-term progress.
-              </p>
-            </div>
-          ))}
+
+          <div className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8">
+            <h3 className="mb-4 text-3xl font-bold">
+              Private Coaching
+            </h3>
+
+            <p className="leading-relaxed text-neutral-400">
+              Structured one-on-one coaching focused on fat loss,
+              body recomposition, strength, energy, and sustainable
+              long-term fitness.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8">
+            <h3 className="mb-4 text-3xl font-bold">
+              Running Performance
+            </h3>
+
+            <p className="leading-relaxed text-neutral-400">
+              Endurance-focused coaching designed to improve aerobic
+              capacity, pacing, and long-term running performance.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8">
+            <h3 className="mb-4 text-3xl font-bold">
+              Hybrid Performance
+            </h3>
+
+            <p className="leading-relaxed text-neutral-400">
+              Strength and conditioning systems built for individuals
+              seeking improved endurance, athleticism, and work capacity.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-neutral-900 bg-neutral-950 p-8">
+            <h3 className="mb-4 text-3xl font-bold">
+              Group Training
+            </h3>
+
+            <p className="leading-relaxed text-neutral-400">
+              Small-group performance coaching built around
+              accountability and structured progression.
+            </p>
+          </div>
+
         </div>
       </section>
 
+      {/* ABOUT */}
       <section className="px-8 py-24 lg:px-20">
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-          <div>
+        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[40%_60%] lg:items-center">
+
+          <div className="flex justify-center lg:justify-start">
             <img
               src="/Coach Chan.png"
               alt="Coach Chan Running"
-              className="rounded-[2rem] object-cover"
+              className="w-full max-w-md rounded-[2rem] object-cover shadow-2xl"
             />
           </div>
 
@@ -97,17 +143,28 @@ export default function Home() {
             </h2>
 
             <div className="space-y-6 text-lg leading-relaxed text-neutral-300">
+
               <p>
                 Coach Chan is a private performance coach focused on helping busy professionals, runners, and athletes build sustainable fitness through structured training, discipline, and long-term consistency.
               </p>
 
               <p>
+                With a background in strength & conditioning, collegiate athletics, and performance coaching, his approach combines evidence-based programming with real-world athletic experience.
+              </p>
+
+              <p>
+                A former NCAA Season 94 Most Bemedalled Athlete in track and field, Coach Chan specializes in strength development, endurance systems, body recomposition, hybrid performance, and long-term athletic development.
+              </p>
+
+              <p>
                 His coaching philosophy is built around consistency over intensity — focusing on sustainable progress, intelligent training, and disciplined execution.
               </p>
+
             </div>
           </div>
         </div>
       </section>
+
     </main>
   )
 }
