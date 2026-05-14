@@ -1,12 +1,12 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
-      
+
       {/* HERO */}
       <section className="border-b border-neutral-900">
-        <div className="grid min-h-screen items-center gap-12 px-8 py-20 lg:grid-cols-[60%_40%] lg:px-20">
+        <div className="grid min-h-screen items-center px-8 py-20 lg:grid-cols-1 lg:px-20">
 
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <p className="mb-4 text-xs uppercase tracking-[0.4em] text-neutral-500">
               The Boring Method
             </p>
@@ -42,17 +42,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm overflow-hidden rounded-[2rem] border border-neutral-800">
-              <img
-                src="/Coach Chan.png"
-                alt="Coach Chan"
-                className="h-[520px] w-full object-cover"
-              />
-
-              <div className="absolute inset-0 bg-black/20" />
-            </div>
-          </div>
         </div>
       </section>
 
