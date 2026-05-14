@@ -1,13 +1,7 @@
 import './globals.css'
-
-export const metadata = {
-  title: 'The Boring Method',
-  description: 'Private Performance Coaching by Coach Chan',
-}
-
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>{children}</body>
     </html>
   )
