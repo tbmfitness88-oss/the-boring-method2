@@ -1,1 +1,1 @@
-# The Boring Method v4
+# The Boring Method
